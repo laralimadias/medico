@@ -1,0 +1,280 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #1e293b;
+}
+
+/* ==========================================================================
+   CONTAINER PRINCIPAL (TELA DIVIDIDA)
+   ========================================================================== */
+.custom-container-login {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    min-height: 600px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    overflow: hidden;
+}
+
+/* Lado Esquerdo - Informações */
+.info-side {
+    flex: 1;
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #ffffff;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-side h1, .info-titulo {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.info-side p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #e0f2fe;
+    margin-bottom: 32px;
+}
+
+/* Caixa com detalhes/benefícios (Efeito Vidro) */
+.health-glass-box {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.health-glass-box p {
+    margin-bottom: 12px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.health-glass-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Lado Direito - Formulário de Login */
+.login-side {
+    flex: 1;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.login-side h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #0f172a;
+}
+
+.login-side p {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+/* ==========================================================================
+   FORMULÁRIOS E INPUTS
+   ========================================================================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
+    margin-bottom: 4px;
+    display: block;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1e293b;
+    background-color: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #0284c7;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+/* Checkbox e Links Úteis */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.remember-forgot label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.remember-forgot a {
+    color: #0284c7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Botões */
+button, .btn-primary {
+    width: 100%;
+    padding: 14px;
+    background-color: #0284c7;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover, .btn-primary:hover {
+    background-color: #0369a1;
+}
+
+/* Divisor "ou" */
+.health-divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #94a3b8;
+    margin: 16px 0;
+    font-size: 14px;
+}
+
+.health-divider::before,
+.health-divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.health-divider span {
+    padding: 0 10px;
+}
+
+/* Botão Secundário (Cadastrar) */
+.health-btn-secondary {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background-color: #f1f5f9;
+    color: #334155;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.health-btn-secondary:hover {
+    background-color: #e2e8f0;
+}
+
+/* Rodapé do Form */
+.health-footer-links {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.health-footer-links .dot {
+    margin: 0 6px;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Tablets e Telas Médias */
+@media (max-width: 720px) {
+    .custom-container-login {
+        flex-direction: column;
+        min-height: unset;
+        margin: 20px;
+        border-radius: 16px;
+    }
+
+    .info-side {
+        padding: 32px 24px;
+    }
+
+    .info-titulo {
+        font-size: 24px;
+    }
+
+    .login-side {
+        width: 100%;
+        padding: 32px 24px;
+    }
+}
+
+/* Celulares Pequenos */
+@media (max-width: 420px) {
+    body {
+        align-items: flex-start;
+        padding: 12px;
+    }
+
+    .custom-container-login {
+        margin: 0;
+        border-radius: 12px;
+    }
+    
+    .info-side, .login-side {
+        padding: 24px 16px;
+    }
+}
