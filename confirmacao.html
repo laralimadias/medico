@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ItabunaMed - Cadastro Concluído</title>
+    <link rel="stylesheet" href="./estilo.css">
+    <style>
+        /* Estilos específicos para a tela de sucesso */
+        .success-box {
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            padding: 48px 32px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .icon-success {
+            width: 80px;
+            height: 80px;
+            background-color: #dcfce7;
+            color: #16a34a;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            margin-bottom: 8px;
+            animation: scaleUp 0.5s ease-out;
+        }
+
+        .success-box h2 {
+            color: #0f172a;
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .success-box p {
+            color: #64748b;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .btn-loading {
+            margin-top: 12px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        /* Animação simples para o ícone */
+        @keyframes scaleUp {
+            0% { transform: scale(0); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="success-box">
+        <div class="icon-success">✓</div>
+        
+        <h2>Cadastro Realizado!</h2>
+        
+        <p>Seu perfil no <strong>ItabunaMed</strong> foi criado com sucesso. Agora você já pode acessar o painel para agendar suas consultas e verificar as vagas disponíveis.</p>
+        
+        <a href="./painel.html" class="btn-primary btn-loading">
+            Acessar Meu Painel →
+        </a>
+    </div>
+
+</body>
+</html>
